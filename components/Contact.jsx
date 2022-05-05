@@ -1,8 +1,14 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Fragment } from 'react';
 import { Dialog, Combobox, Transition } from '@headlessui/react';
 import CloseButton from './buttons/CloseButton';
 
 function Contact({ isContactOpen, setIsContactOpen }) {
+  const handleSummit = (e) => {
+    e.preventDefault();
+    setIsContactOpen(false);
+  };
+
   return (
 
     <Transition show={isContactOpen} as={Fragment}>
@@ -12,7 +18,7 @@ function Contact({ isContactOpen, setIsContactOpen }) {
       >
         <Dialog.Overlay className="absolute inset-0 bg-gray-800/95" />
         <div className=" flex flex-wrap items-center justify-center ">
-          <form className="w-11/12 md:w-9/12 bg-white z-10 p-10 relative">
+          <form className="w-11/12 md:w-9/12 bg-white z-10 p-10 relative" onSubmit={(e) => handleSummit()}>
             <CloseButton closeModal={() => setIsContactOpen(false)} />
             <div className="grid xl:grid-cols-2 xl:gap-6">
               <div className="relative z-0 mb-6 w-full group">

@@ -5,10 +5,10 @@ import { ThemeProvider } from 'next-themes';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import siteMetadata from '@/data/siteMetadata';
-import LayoutWrappers from '@/components/LayoutWrappers';
-import LoadingScreen from '@/components/LoadingScreen';
-import { PageSEO } from '@/components/SEO';
+import siteMetadata from '../data/siteMetadata';
+import LayoutWrappers from '../components/LayoutWrappers';
+import LoadingScreen from '../components/LoadingScreen';
+import { PageSEO } from '../components/SEO';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -32,9 +32,9 @@ function MyApp({ Component, pageProps }) {
         <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
 
         {/* {loading ? <LoadingScreen /> : ( */}
-          <LayoutWrappers>
-            <Component {...pageProps} />
-          </LayoutWrappers>
+        <LayoutWrappers>
+          <Component {...pageProps} />
+        </LayoutWrappers>
         {/* )} */}
       </ThemeProvider>
     </TerminalContextProvider>

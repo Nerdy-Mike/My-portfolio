@@ -1,6 +1,8 @@
+/* eslint-disable react/no-danger */
+/* eslint-disable no-nested-ternary */
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import siteMetadata from '@/data/siteMetadata';
+import siteMetadata from '../data/siteMetadata';
 
 function CommonSEO({
   title, description, ogType, ogImage, twImage, canonicalUrl,
