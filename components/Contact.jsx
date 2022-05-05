@@ -20,11 +20,17 @@ function Contact({ isContactOpen, setIsContactOpen }) {
       [e.target.name]: e.target.value,
     });
   };
-
+  const validateEmail = (email) => String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+    );
   const handleSummit = (e) => {
     e.preventDefault();
-    if (toSend.name === '' || toSend.email === '' || toSend.subject === '' || toSend.message === '') {
-      setStatus('Please fill in all the fields.');
+    if (toSend.name === '' || toSend.email === '' || toSend.subject === '' || toSend.message === '' 
+      || !validateEmail(toSend.email)
+    ) {
+      setStatus(1);
       setIsMessageOpen(true);
       return;
     }
