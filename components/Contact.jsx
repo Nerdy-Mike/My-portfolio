@@ -27,7 +27,7 @@ function Contact({ isContactOpen, setIsContactOpen }) {
     );
   const handleSummit = (e) => {
     e.preventDefault();
-    if (toSend.name === '' || toSend.email === '' || toSend.subject === '' || toSend.message === '' 
+    if (toSend.name === '' || toSend.email === '' || toSend.subject === '' || toSend.message === ''
       || !validateEmail(toSend.email)
     ) {
       setStatus(1);
