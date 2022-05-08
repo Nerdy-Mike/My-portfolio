@@ -19,7 +19,7 @@ function Projects({ isShowProjectsOpen, setIsShowProjectsOpen }) {
       id: 1,
       url: 'https://tropical-of-c-frontend.vercel.app/',
       desc: 'Full-stack ecommerce website built with Nextjs, Tailwind, Nodejs, and MongoDB.',
-      tags: ['Nextjs', 'Node', 'MongoDB', 'Tailwind'],
+      tags: ['Nextjs', 'Nodejs', 'MongoDB', 'Tailwind'],
     },
     {
       name: 'AWS Face Recognition',
@@ -43,11 +43,25 @@ function Projects({ isShowProjectsOpen, setIsShowProjectsOpen }) {
       tags: ['React'],
     },
     {
-      name: 'Chat App',
+      name: 'Chat App Mobile',
       id: 7,
       url: 'https://github.com/Nerdy-Mike/Chat-Messaging-App-Light-and-Dark-Theme',
       desc: 'Learn Dart and build a chat app with a dark and light theme.',
       tags: ['Dart', 'Swift', 'Ruby'],
+    },
+    {
+      name: 'Memories',
+      id: 9,
+      url: 'https://github.com/Nerdy-Mike/memories-app',
+      desc: 'Full stack application that allows users to create and share memories.',
+      tags: ['React', 'Material-ui', 'Nodejs', 'MongoDB'],
+    },
+    {
+      name: 'Chat app with twilio',
+      id: 10,
+      url: 'https://github.com/Nerdy-Mike/chatapp_stream_twilio',
+      desc: 'This chat app is build with real-time SMS twilio and is optimized for internal systems, especially for emergency settings.',
+      tags: ['React', 'Nodejs'],
     },
   ];
   const MLProjects = [
