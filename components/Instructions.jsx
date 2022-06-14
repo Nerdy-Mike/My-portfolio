@@ -13,8 +13,8 @@ function Instructions() {
         </div>
         <div className="col-span-3 flex flex-col">
 
-          <div className="grid grid-cols-2 pb-6">
-            <div className="3xl:pb-10 pb-2 dark:text-gray-300 t text-gray-600">
+          <div className="grid grid-cols-2 pb-4">
+            <div className="3xl:pb-10 pb-2 dark:text-gray-300  text-gray-600">
               <p className="text-center">whoami: About me</p>
             </div>
             <div className=" 3xl:pb-10 pb-2 items-center dark:text-gray-300 text-gray-600">
